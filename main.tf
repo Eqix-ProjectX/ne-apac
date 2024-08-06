@@ -9,7 +9,7 @@ terraform {
     organization = "EQIX_projectX"
 
     workspaces {
-      name = "metal-apac"
+      name = "ne-apac"
     }
   }
 }
