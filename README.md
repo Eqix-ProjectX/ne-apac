@@ -36,3 +36,9 @@ username           = "username"
 key_name           = "pubkey"
 acl_template_id    = "uuid"
 ```  
+
+>[!note]
+>Declare your credential as environment variables before you run.  
+>`export EQUINIX_API_CLIENTID=someEquinixAPIClientID`  
+>`export EQUINIX_API_CLIENTSECRET=someEquinixAPIClientSecret`  
+>`export METAL_AUTH_TOKEN=someEquinixMetalToken`
