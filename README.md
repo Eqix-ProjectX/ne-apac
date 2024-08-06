@@ -36,4 +36,3 @@ username           = "username"
 key_name           = "pubkey"
 acl_template_id    = "uuid"
 ```  
-

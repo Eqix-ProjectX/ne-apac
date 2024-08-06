@@ -1,12 +1,3 @@
-output "hostname_instance" {
-  value = module.instance.hostname
-}
-output "instance_id" {
-  value = module.instance.id
-}
-output "instance_pip" {
-  value = module.instance.pip
-}
 output "hostname_vd" {
   value     = module.ne.hostname_vd
   sensitive = true
