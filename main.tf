@@ -112,4 +112,5 @@ resource "null_resource" "cisco" {
       "python3 restconf.py"
     ]
   }
+  depends_on = [ module.ne ]
 }
