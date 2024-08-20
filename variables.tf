@@ -10,5 +10,8 @@ variable "sec_account_number" {}
 variable "username" {}
 variable "key_name" {}
 variable "acl_template_id" {}
-variable "private_key" {}
+variable "private_key" {
+  type      = string
+  sensitive = true
+}
 variable "project_id" {}
