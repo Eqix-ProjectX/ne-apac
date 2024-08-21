@@ -10,3 +10,11 @@ output "ssh_ip_vd" {
 output "ssh_ip_vd_sec" {
   value = module.ne.ssh_ip_vd_sec
 }
+output "vd_password" {
+  value = module.ne.pass
+  sensitive = true
+}
+output "vd_password_sec" {
+  value = module.ne.pass_sec
+  sensitive = true
+}
