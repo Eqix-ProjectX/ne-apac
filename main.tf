@@ -5,13 +5,13 @@ terraform {
     }
   }
 
-  # cloud {
-  #   organization = "EQIX_projectX"
+  cloud {
+    organization = "EQIX_projectX"
 
-  #   workspaces {
-  #     name = "ne-apac"
-  #   }
-  # }
+    workspaces {
+      name = "ne-apac"
+    }
+  }
 }
 
 # data "equinix_network_device" "vd_pri" {
