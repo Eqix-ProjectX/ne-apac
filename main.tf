@@ -14,14 +14,14 @@ terraform {
   }
 }
 
-data "equinix_network_device" "vd_pri" {
-  name       = "vd-${var.metro_code}-${var.username}-pri"
-  depends_on = [module.ne]
-}
-data "equinix_network_device" "vd_sec" {
-  name       = "vd-${var.sec_metro_code}-${var.username}-sec"
-  depends_on = [module.ne]
-}
+# data "equinix_network_device" "vd_pri" {
+#   name       = "vd-${var.metro_code}-${var.username}-pri"
+#   depends_on = [module.ne]
+# }
+# data "equinix_network_device" "vd_sec" {
+#   name       = "vd-${var.sec_metro_code}-${var.username}-sec"
+#   depends_on = [module.ne]
+# }
 data "equinix_metal_device" "terminal" {
   project_id = var.project_id
   hostname   = "metal-${var.metro_code}-node-1"
@@ -66,16 +66,16 @@ locals {
 
   pri = {
     'device_type': 'cisco_xe',
-    'host'       : '${data.equinix_network_device.vd_pri.ssh_ip_address}',
+    'host'       : '${module.ne.ssh_ip_address}',
     'username'   : '${var.username}',
-    'password'   : '${data.equinix_network_device.vd_pri.vendor_configuration.adminPassword}'
+    'password'   : '${module.ne.vendor_configuration.adminPassword}'
   }
 
   sec = {
     'device_type': 'cisco_xe',
-    'host'       : '${data.equinix_network_device.vd_sec.ssh_ip_address}',
+    'host'       : '${module.ne.secondary_device[0].ssh_ip_address}',
     'username'   : '${var.username}',
-    'password'   : '${data.equinix_network_device.vd_sec.vendor_configuration.adminPassword}'
+    'password'   : '${module.ne.secondary_device[0].vendor_configuration.adminPassword}'
   }
 
   ha = [pri, sec]
