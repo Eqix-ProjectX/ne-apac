@@ -66,16 +66,16 @@ locals {
 
   pri = {
     'device_type': 'cisco_xe',
-    'host'       : '${module.ne.ssh_ip_address}',
+    'host'       : '${module.ne.ssh_ip_vd}',
     'username'   : '${var.username}',
-    'password'   : '${module.ne.vendor_configuration.adminPassword}'
+    'password'   : '${module.ne.vd_password}'
   }
 
   sec = {
     'device_type': 'cisco_xe',
-    'host'       : '${module.ne.secondary_device[0].ssh_ip_address}',
+    'host'       : '${module.ne.ssh_ip_vd_sec}',
     'username'   : '${var.username}',
-    'password'   : '${module.ne.secondary_device[0].vendor_configuration.adminPassword}'
+    'password'   : '${module.ne.vd_pasword_sec}'
   }
 
   ha = [pri, sec]
