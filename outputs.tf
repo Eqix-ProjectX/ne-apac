@@ -10,11 +10,11 @@ output "ssh_ip_vd" {
 output "ssh_ip_vd_sec" {
   value = module.ne.ssh_ip_vd_sec
 }
-output "uuid_pri" {
-  value = module.ne.uuid_pri
+output "vd_uuid" {
+  value = module.ne.vd_uuid
 }
-output "uuid_sec" {
-  value = module.ne.uuid_sec
+output "vd_uuid_sec" {
+  value = module.ne.vd_uuid_sec
 }
 output "vd_password" {
   value = module.ne.pass
