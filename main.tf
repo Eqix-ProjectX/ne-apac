@@ -68,14 +68,14 @@ locals {
     'device_type': 'cisco_xe',
     'host'       : '${module.ne.ssh_ip_vd}',
     'username'   : '${var.username}',
-    'password'   : '${module.ne.vd_password}'
+    'password'   : '${module.ne.pass}'
   }
 
   sec = {
     'device_type': 'cisco_xe',
     'host'       : '${module.ne.ssh_ip_vd_sec}',
     'username'   : '${var.username}',
-    'password'   : '${module.ne.vd_pasword_sec}'
+    'password'   : '${module.ne.pass_sec}'
   }
 
   ha = [pri, sec]
