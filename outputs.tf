@@ -17,10 +17,10 @@ output "vd_uuid_sec" {
   value = module.ne.vd_uuid_sec
 }
 output "vd_password" {
-  value = module.ne.pass
+  value     = module.ne.pass
   sensitive = true
 }
 output "vd_password_sec" {
-  value = module.ne.pass_sec
+  value     = module.ne.pass_sec
   sensitive = true
 }

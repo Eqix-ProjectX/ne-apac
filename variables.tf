@@ -14,4 +14,4 @@ variable "private_key" {
   type      = string
   sensitive = true
 }
-variable "project_id" {}
+variable "project_id_mt" {}
