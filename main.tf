@@ -23,7 +23,7 @@ terraform {
 #   depends_on = [module.ne]
 # }
 data "equinix_metal_device" "terminal" {
-  project_id = var.project_id
+  project_id = var.project_id_mt
   hostname   = "metal-${var.metro_code}-node-1"
   lifecycle {
     precondition {
